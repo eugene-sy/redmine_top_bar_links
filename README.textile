@@ -1,0 +1,29 @@
+h1. Redmine Top Bar Links
+
+This plugin allow you to add links to Redmine top bar by adding it to config file.
+Now plugin allows to add links to top bar of all authenticated users.
+
+h2. Installation
+
+# Download source files
+# Copy sources to #{REDMINE_HOME}/vendor/plugins
+# Check owner and permissions
+# Restart your application
+
+No plugin migrations or gem installation required
+
+h2. Configuration
+
+# Open #{REDMINE_HOME}/vendor/plugins/redmine_top_bar_links/config.yml
+# For each link add block:
+<pre>
+	link:
+	  name: link_name
+	  path: link_path
+</pre>
+Where 'link_name' is a name of the link. It will be displayed on top bar,
+'link_path' is a place, where link will point to.
+
+h2. Other info
+
+Plugin was tested on Ubuntu Server 10.04 and Debian 6 with Ruby 1.8.7 and REE on both Apache2 and Nginx with Passenger.  
