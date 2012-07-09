@@ -17,7 +17,7 @@ h2. Configuration
 # Open #{REDMINE_HOME}/vendor/plugins/redmine_top_bar_links/config.yml
 # For each link add block:
 <pre>
-	link:
+	link_#:
 	  name: link_name
 	  path: link_path
 </pre>

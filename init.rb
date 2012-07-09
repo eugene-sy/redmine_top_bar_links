@@ -9,9 +9,12 @@ Redmine::Plugin.register :redmine_top_bar_links do
   url 'https://github.com/Axblade/redmine_top_bar_links'
   author_url 'https://github.com/Axblade'
 
+
+  proc = Proc.new { |menu, key, value|  menu.push key.to_sym, value, :if => Proc.new { User.current.logged? } }
+
   Redmine::MenuManager.map :top_menu do |menu|
     RedmineTopBarLinks::LinkCreator.link_list.each do |key, value|
-      menu.push key.to_sym, value, :if => Proc.new { User.current.logged? }
+      proc.call menu, key, value
     end
   end
 end
