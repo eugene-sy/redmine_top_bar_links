@@ -1,7 +1,4 @@
-link_1:
-  name: 'TeamCity'
-  path: 'https://example.org/example/'
 
-link_2:
-  name: 'SVN'
-  path: 'https://example.org/example/'
+TeamCity: https://example.org/example/
+
+SVN: https://example.org/example/
