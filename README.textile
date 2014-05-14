@@ -6,24 +6,35 @@ Now plugin allows to add links to top bar of all authenticated users.
 h2. Installation
 
 # Download source files
-# Copy sources to #{REDMINE_HOME}/vendor/plugins
+# Copy sources to #{REDMINE_HOME}/vendor/plugins if you're installing plugin for Redmine 1.*
+or to #{REDMINE_HOME}/plugins if you're installing plugin for Redmine 2.*
 # Check owner and permissions
-# Restart your application
+# Restart your Redmine application server
+
+You can also use git instead of copying files:
+<pre>
+  cd $REDMINE/plugins
+  git clone git@github.com:Axblade/redmine_top_bar_links.git
+</pre>
 
 No plugin migrations or gem installation required
 
 h2. Configuration
 
-# Open #{REDMINE_HOME}/vendor/plugins/redmine_top_bar_links/config.yml
+# Open #{REDMINE_HOME}/vendor/plugins/redmine_top_bar_links/config.yml for Redmine 1.* installation
+  #{REDMINE_HOME}/plugins/redmine_top_bar_links/config.yml for Redmine 2.*
 # For each link add block:
 <pre>
-	link_#:
-	  name: link_name
-	  path: link_path
+  name: url
 </pre>
-Where 'link_name' is a name of the link. It will be displayed on top bar,
-'link_path' is a place, where link will point to.
+Where 'name' is a name of the link. It will be displayed on top bar,
+'url' is a place, where link will point to.
 
-h2. Other info
+h2. Support
 
-Plugin was tested on Ubuntu Server 10.04 and Debian 6 with Ruby 1.8.7 and REE on both Apache2 and Nginx with Passenger.  
+Redmine v1.3+
+Redmine v2.+
+
+h2. License
+
+Plugin is distributed under MIT license
